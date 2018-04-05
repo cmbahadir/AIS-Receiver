@@ -1,0 +1,42 @@
+-- LEDler 2.54mm aralikla yanyana olacak;
+	Yesil -- Power
+	Mavi -- Charging
+	Kirmizi -- Out of Charge
+	Sari -- GPIO Led - Data Transmission
+
+-- Si4464 pinleri CS VSPI IO2'ye baglanacak.
+-- ufl connnector SMa olarak degisecek.
+-- Kutu altinkaya SF240 contali - IP65 - ayakli.(üretime gitmeden önce kutudan bir örnek alarak pcb svg çiktisini karsilastir.)
+-- AD2112 Regulator - Schotkky Diode - Transistor footprintlerine dikkat.
+-- Si4464 crystal 30 MHz olarak degisecek.
+-- Mikro USB konnektör tipini tamamen SMT olacak sekilde degistir.
+-- C15'i FTDI chipten uzaklastir.
+-- Si4464'e metal enclosure altina al.
+-- VHF RF yollarini 50 ohm'a göre match et. (Referans: AWR tx-line calculator - http://forum.43oh.com/topic/4833-potm-daisy-a-simple-ais-receiver/?page=2)
+-- D3 ve D4 ledlerini tekrardan tasarla.(Adafruit referans.)
+-- Vida yuvalarinin çevrelerine izolasyon ekle.(https://forum.kicad.info/t/screw-holes-for-mounting-boards/2195/2)
+-- FT231XS driver yüklemesi gerekmeyecek diger daha ucuz FTDI çiplerine bak.
+-- NMEA outputu ekle.
+-- LIs331HH SA0/SDO pinini i2c mode'da adresi belirdeigi için floating birakma ground'a bagla.
+-- Komponent boyutlarini 0805 olarak güncelle daha kolay bulunuyor.
+-- JTAG Debugger (GPIO15(TDO) - GPIO12(TDI) - GPIO13(TCK) - GPIO14(TMS))
+	- GPIO12'ye pull resistor eklenecek.
+
+v1.1
+
+--- On-Off Switch
+--- LED araliklarini led basliklari sigacak sekilde genislet.
+--- Arka tarafta yazili olan pin assignment isimlerinde V3.3 - GND - CS ters görünüyor.
+--- LED'Leri fonksiyonlarina göre isimlendir.
+
+Software V0.0 To Do
+
+--- Sleep when there is no ais data.
+--- Search for Wi-Fi When usb is plugged.
+
+--- 3 Modes of Operation
+	- NMEA Sentence Over USB to PC and Android Device
+	- As Wi-Fi Host (Power input - Default Password and Hostname)
+	- Signal K format to internet(MarisneTraffic) over Wi-Fi (Control panel on PC and Android 	should be developed for configuration.)(Power cable and battery maybe)
+--- Mode of operation inclinometer
+	- LIS331HHden gelen datayi ESP32 ile oku ve NMEA connectör ile NMEA output - USB - Wi-Fi ile 		Signal K gatewayine output ver.

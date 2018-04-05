@@ -1,0 +1,9 @@
+(module microVia (layer F.Cu) (tedit 59B10469)
+  (fp_text reference GND (at 0.0254 1.4224) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value GND (at -0.0254 -1.524) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad GND thru_hole circle (at -0.0254 0) (size 0.762 0.762) (drill 0.508) (layers *.Cu *.Mask))
+)

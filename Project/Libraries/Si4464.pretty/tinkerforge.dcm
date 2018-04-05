@@ -1,0 +1,158 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74LVC1G17
+D buffer with Schmitt trigger.
+$ENDCMP
+#
+$CMP AGND
+K POWER, PWR
+$ENDCMP
+#
+$CMP AGND1
+K POWER, PWR
+$ENDCMP
+#
+$CMP AGND2
+K POWER, PWR
+$ENDCMP
+#
+$CMP AGND3
+K POWER, PWR
+$ENDCMP
+#
+$CMP CONN_01X02
+D Connector 01x04
+$ENDCMP
+#
+$CMP CONN_01X04
+D Connector 01x04
+$ENDCMP
+#
+$CMP CONN_21
+D Symbole general de connexion
+K CONN
+$ENDCMP
+#
+$CMP C_PACK4
+D 4 resistors Pack
+K R DEV
+$ENDCMP
+#
+$CMP D
+D Diode
+$ENDCMP
+#
+$CMP D_Bridge
+D Diode bridge (pins: 1=-, 2=AC, 3=+, 4=AC)
+K rectifier acdc
+$ENDCMP
+#
+$CMP FDC2512
+D SI4456DY - SO8
+$ENDCMP
+#
+$CMP GNDD1
+K POWER, PWR
+$ENDCMP
+#
+$CMP GNDD2
+K POWER, PWR
+$ENDCMP
+#
+$CMP LED
+K LED
+$ENDCMP
+#
+$CMP LM358N
+D Dual Op amp (low power)
+K ampliop
+F ns/lm158.pdf
+$ENDCMP
+#
+$CMP LMC6062
+D Dual Op amp (low power)
+K ampliop
+F op_amps/lmc6062.pdf
+$ENDCMP
+#
+$CMP LMC6082
+D Dual Op amp (low power)
+K ampliop
+F op_amps/lmc6082.pdf
+$ENDCMP
+#
+$CMP LTV-847
+D DIP-16, Quad DC Optocoupler, Vce 35V, CTR 50%
+K NPN DC Quad Optocoupler
+F http://www.us.liteon.com/downloads/LTV-817-827-847.PDF
+$ENDCMP
+#
+$CMP MC33178
+D Dual audio Op amp (ultra low noise)
+K ampliop audio
+F onsemi/mc33178.pdf
+$ENDCMP
+#
+$CMP MMBTA42
+F transistors/bipolar/*.*
+$ENDCMP
+#
+$CMP MOSFET_N_CH
+D Transistor P-MOSFET, collector connected to mounting plane (general)
+K pmos p-mos p-mosfet transistor
+$ENDCMP
+#
+$CMP MOSFET_P_CH
+D Transistor P-MOSFET (general)
+K pmos p-mos p-mosfet transistor
+$ENDCMP
+#
+$CMP Optocoupler
+D Optocoupler
+K Optocoupler
+$ENDCMP
+#
+$CMP R_PACK4
+D 4 resistors Pack
+K R DEV
+$ENDCMP
+#
+$CMP R_PACK8
+D 8 resistors Pack
+K R DEV
+$ENDCMP
+#
+$CMP TL072
+D Dual Op amp (low power)
+K ampliop
+$ENDCMP
+#
+$CMP TL082
+D Dual Op amp (Cmos)
+K ampliop
+$ENDCMP
+#
+$CMP TLP2361
+D SOP4, Single Optocoupler, Vce 80V, CTR 50-100%
+K NPN DC Quad Optocoupler
+F http://www.semicon.toshiba.co.jp/docs/datasheet/en/Opto/TLP291-4_en_datasheet_120322.pdf
+$ENDCMP
+#
+$CMP TLP293
+D SOP4, Single Optocoupler, Vce 80V, CTR 50-100%
+K NPN DC Quad Optocoupler
+F http://www.semicon.toshiba.co.jp/docs/datasheet/en/Opto/TLP291-4_en_datasheet_120322.pdf
+$ENDCMP
+#
+$CMP TLV271
+D Dual Op amp (low power)
+K ampliop
+F ns/lm158.pdf
+$ENDCMP
+#
+$CMP ZENER
+D Diode zener
+K DEV DIODE
+$ENDCMP
+#
+#End Doc Library
