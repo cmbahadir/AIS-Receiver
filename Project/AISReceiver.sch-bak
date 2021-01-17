@@ -1,0 +1,1941 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "AIS Receiver By CMB v1.0"
+Date "2017-09-07"
+Rev "B"
+Comp "15.09.2017 - Cihan Mete BAHADIR"
+Comment1 "Wi-Fi and Bluetooth Support : ESP32 - Battery Charging over USB."
+Comment2 "an AIS Receiver with BLE - WIFI connection powered by a Li-PO Battery."
+Comment3 "This Project is aimed to Design and Implement"
+Comment4 ""
+$EndDescr
+$Comp
+L AISReceiver-rescue:Si4362 U6
+U 1 1 51EB040B
+P 3945 6050
+F 0 "U6" H 3945 5950 50  0000 C CNN
+F 1 "SI4464" H 3945 6150 50  0000 C CNN
+F 2 "Si4464:Si4464" H 3945 6050 50  0001 C CNN
+F 3 "DOCUMENTATION" H 3945 6050 50  0001 C CNN
+	1    3945 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C-RESCUE-AISReceiver CR2
+U 1 1 51EB04F8
+P 2460 4550
+F 0 "CR2" H 2460 4650 40  0000 L CNN
+F 1 "12 pF" H 2466 4465 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2498 4400 30  0001 C CNN
+F 3 "~" H 2460 4550 60  0000 C CNN
+	1    2460 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C-RESCUE-AISReceiver CR1
+U 1 1 51EB0507
+P 2060 5750
+F 0 "CR1" H 2060 5850 40  0000 L CNN
+F 1 "6 pF" H 2066 5665 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2098 5600 30  0001 C CNN
+F 3 "~" H 2060 5750 60  0000 C CNN
+	1    2060 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:C-RESCUE-AISReceiver C16
+U 1 1 51EB0516
+P 4055 4815
+F 0 "C16" H 4055 4915 40  0000 L CNN
+F 1 "100pF" H 4061 4730 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4093 4665 30  0001 C CNN
+F 3 "~" H 4055 4815 60  0000 C CNN
+	1    4055 4815
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C-RESCUE-AISReceiver C17
+U 1 1 51EB0525
+P 4455 4815
+F 0 "C17" H 4455 4915 40  0000 L CNN
+F 1 "100nF" H 4461 4730 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4493 4665 30  0001 C CNN
+F 3 "~" H 4455 4815 60  0000 C CNN
+	1    4455 4815
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:INDUCTOR LR1
+U 1 1 51EB055A
+P 1660 5350
+F 0 "LR1" H 1665 5305 40  0000 C CNN
+F 1 "160 nH" H 1690 5435 40  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1660 5350 60  0001 C CNN
+F 3 "~" H 1660 5350 60  0000 C CNN
+	1    1660 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:INDUCTOR LR2
+U 1 1 51EB0569
+P 2460 5350
+F 0 "LR2" H 2440 5295 40  0000 C CNN
+F 1 "240 nH" H 2445 5445 40  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 2460 5350 60  0001 C CNN
+F 3 "~" H 2460 5350 60  0000 C CNN
+	1    2460 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR01
+U 1 1 51EB0578
+P 2460 4150
+F 0 "#PWR01" H 2460 4150 30  0001 C CNN
+F 1 "GND" H 2460 4080 30  0001 C CNN
+F 2 "" H 2460 4150 60  0000 C CNN
+F 3 "" H 2460 4150 60  0000 C CNN
+	1    2460 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR02
+U 1 1 51EB05C0
+P 4855 5295
+F 0 "#PWR02" H 4855 5295 30  0001 C CNN
+F 1 "GND" H 4855 5225 30  0001 C CNN
+F 2 "" H 4855 5295 60  0000 C CNN
+F 3 "" H 4855 5295 60  0000 C CNN
+	1    4855 5295
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:BNC P1
+U 1 1 51EB088F
+P 700 5750
+F 0 "P1" H 710 5870 60  0000 C CNN
+F 1 "Antenna" V 810 5690 40  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134_Vertical" H 760 5970 60  0001 C CNN
+F 3 "~" H 700 5750 60  0000 C CNN
+	1    700  5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR03
+U 1 1 51EB0A23
+P 700 5150
+F 0 "#PWR03" H 700 5150 30  0001 C CNN
+F 1 "GND" H 700 5080 30  0001 C CNN
+F 2 "" H 700 5150 60  0000 C CNN
+F 3 "" H 700 5150 60  0000 C CNN
+	1    700  5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:R-RESCUE-AISReceiver R20
+U 1 1 51EB13D8
+P 3265 4940
+F 0 "R20" V 3345 4940 40  0000 C CNN
+F 1 "100 K" V 3272 4941 40  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3195 4940 30  0001 C CNN
+F 3 "~" H 3265 4940 30  0000 C CNN
+	1    3265 4940
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR04
+U 1 1 51EB13F1
+P 3265 4490
+F 0 "#PWR04" H 3265 4490 30  0001 C CNN
+F 1 "GND" H 3265 4420 30  0001 C CNN
+F 2 "" H 3265 4490 60  0000 C CNN
+F 3 "" H 3265 4490 60  0000 C CNN
+	1    3265 4490
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:R-RESCUE-AISReceiver R22
+U 1 1 527EDCAB
+P 4970 5785
+F 0 "R22" V 5050 5785 40  0000 C CNN
+F 1 "100K" V 4977 5786 40  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4900 5785 30  0001 C CNN
+F 3 "~" H 4970 5785 30  0000 C CNN
+	1    4970 5785
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR05
+U 1 1 527EDCFC
+P 4970 5455
+F 0 "#PWR05" H 4970 5455 30  0001 C CNN
+F 1 "GND" H 4970 5385 30  0001 C CNN
+F 2 "" H 4970 5455 60  0000 C CNN
+F 3 "" H 4970 5455 60  0000 C CNN
+	1    4970 5455
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:C-RESCUE-AISReceiver CR3
+U 1 1 52D481B6
+P 1160 5750
+F 0 "CR3" H 1160 5850 40  0000 L CNN
+F 1 "220 pF" H 1166 5665 40  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 1198 5600 30  0001 C CNN
+F 3 "~" H 1160 5750 60  0000 C CNN
+	1    1160 5750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5260 6150 2    39   Input ~ 0
+nSEL
+Text GLabel 5260 6250 2    39   Input ~ 0
+SDI
+Text GLabel 5260 6350 2    39   Output ~ 0
+SDO
+Text GLabel 5260 6450 2    39   Input ~ 0
+SCLK
+Text GLabel 5260 6550 2    39   Output ~ 0
+nIRQ
+Text GLabel 4590 5550 2    39   BiDi ~ 0
+GPIO0
+Text GLabel 4590 5650 2    39   BiDi ~ 0
+GPIO1
+Text GLabel 4590 5750 2    39   BiDi ~ 0
+GPIO2
+Text GLabel 4590 5850 2    39   BiDi ~ 0
+GPIO3
+Text GLabel 3180 5550 0    39   Output ~ 0
+SDN
+$Comp
+L AISReceiver-rescue:FT231XS U5
+U 1 1 599E8D10
+P 13850 2365
+F 0 "U5" H 13300 3165 50  0000 L CNN
+F 1 "FT231XS" H 14150 3165 50  0000 L CNN
+F 2 "Silicon-Standard:SSOP_20" H 13850 2365 50  0001 C CNN
+F 3 "" H 13850 2365 50  0001 C CNN
+	1    13850 2365
+	1    0    0    -1  
+$EndComp
+Text GLabel 4930 4515 2    39   Input ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR06
+U 1 1 599F66EF
+P 3945 6890
+F 0 "#PWR06" H 3945 6890 30  0001 C CNN
+F 1 "GND" H 3945 6820 30  0001 C CNN
+F 2 "" H 3945 6890 60  0000 C CNN
+F 3 "" H 3945 6890 60  0000 C CNN
+	1    3945 6890
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:USB_OTG J4
+U 1 1 59A0872D
+P 11440 2060
+F 0 "J4" H 11240 2510 50  0000 L CNN
+F 1 "USB_OTG" H 11240 2410 50  0000 L CNN
+F 2 "Si4464:USB_Micro-B" H 11590 2010 50  0001 C CNN
+F 3 "" H 11590 2010 50  0001 C CNN
+	1    11440 2060
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:MBT3904DW1 Q2
+U 2 1 59A09594
+P 10495 9725
+F 0 "Q2" H 10695 9775 50  0000 L CNN
+F 1 "MBT3904DW1" H 10695 9675 50  0000 L CNN
+F 2 "Si4464:SOT-363" H 10695 9825 50  0001 C CNN
+F 3 "" H 10495 9725 50  0001 C CNN
+	2    10495 9725
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:C C11
+U 1 1 59A1160D
+P 12040 2645
+F 0 "C11" H 12065 2745 50  0000 L CNN
+F 1 "47pF" H 11850 2550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 12078 2495 50  0001 C CNN
+F 3 "" H 12040 2645 50  0001 C CNN
+	1    12040 2645
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C C12
+U 1 1 59A11752
+P 12260 2645
+F 0 "C12" H 12285 2745 50  0000 L CNN
+F 1 "47pF" H 12070 2550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 12298 2495 50  0001 C CNN
+F 3 "" H 12260 2645 50  0001 C CNN
+	1    12260 2645
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C C14
+U 1 1 59A11AAE
+P 12895 1375
+F 0 "C14" H 12920 1475 50  0000 L CNN
+F 1 "4.7uF" H 12920 1275 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 12933 1225 50  0001 C CNN
+F 3 "" H 12895 1375 50  0001 C CNN
+	1    12895 1375
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:C C13
+U 1 1 59A11C32
+P 12650 1375
+F 0 "C13" H 12675 1475 50  0000 L CNN
+F 1 "0.1uF" H 12675 1275 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 12688 1225 50  0001 C CNN
+F 3 "" H 12650 1375 50  0001 C CNN
+	1    12650 1375
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:C C15
+U 1 1 59A11CC5
+P 13025 2650
+F 0 "C15" H 13050 2750 50  0000 L CNN
+F 1 "0.1uF" H 13050 2550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 13063 2500 50  0001 C CNN
+F 3 "" H 13025 2650 50  0001 C CNN
+	1    13025 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C C10
+U 1 1 59A11DF5
+P 11825 2645
+F 0 "C10" H 11850 2745 50  0000 L CNN
+F 1 "0.1uF" H 11600 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 11863 2495 50  0001 C CNN
+F 3 "" H 11825 2645 50  0001 C CNN
+	1    11825 2645
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:R R17
+U 1 1 59A12B6F
+P 12450 2060
+F 0 "R17" V 12365 2130 50  0000 C CNN
+F 1 "27R" V 12450 2060 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 12380 2060 50  0001 C CNN
+F 3 "" H 12450 2060 50  0001 C CNN
+	1    12450 2060
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:R R18
+U 1 1 59A12C6E
+P 12450 2160
+F 0 "R18" V 12535 2235 50  0000 C CNN
+F 1 "27R" V 12450 2160 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 12380 2160 50  0001 C CNN
+F 3 "" H 12450 2160 50  0001 C CNN
+	1    12450 2160
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR07
+U 1 1 59A133D5
+P 11825 2840
+F 0 "#PWR07" H 11825 2590 50  0001 C CNN
+F 1 "GND" H 11825 2690 50  0000 C CNN
+F 2 "" H 11825 2840 50  0001 C CNN
+F 3 "" H 11825 2840 50  0001 C CNN
+	1    11825 2840
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR08
+U 1 1 59A13594
+P 12040 2840
+F 0 "#PWR08" H 12040 2590 50  0001 C CNN
+F 1 "GND" H 12040 2690 50  0000 C CNN
+F 2 "" H 12040 2840 50  0001 C CNN
+F 3 "" H 12040 2840 50  0001 C CNN
+	1    12040 2840
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR09
+U 1 1 59A1379A
+P 12260 2835
+F 0 "#PWR09" H 12260 2585 50  0001 C CNN
+F 1 "GND" H 12260 2685 50  0000 C CNN
+F 2 "" H 12260 2835 50  0001 C CNN
+F 3 "" H 12260 2835 50  0001 C CNN
+	1    12260 2835
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR010
+U 1 1 59A13AB1
+P 12895 1190
+F 0 "#PWR010" H 12895 940 50  0001 C CNN
+F 1 "GND" H 12895 1040 50  0000 C CNN
+F 2 "" H 12895 1190 50  0001 C CNN
+F 3 "" H 12895 1190 50  0001 C CNN
+	1    12895 1190
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR011
+U 1 1 59A13F4E
+P 12650 1190
+F 0 "#PWR011" H 12650 940 50  0001 C CNN
+F 1 "GND" H 12650 1040 50  0000 C CNN
+F 2 "" H 12650 1190 50  0001 C CNN
+F 3 "" H 12650 1190 50  0001 C CNN
+	1    12650 1190
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR012
+U 1 1 59A140DF
+P 13025 2830
+F 0 "#PWR012" H 13025 2580 50  0001 C CNN
+F 1 "GND" H 13025 2680 50  0000 C CNN
+F 2 "" H 13025 2830 50  0001 C CNN
+F 3 "" H 13025 2830 50  0001 C CNN
+	1    13025 2830
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR013
+U 1 1 59A153D2
+P 11390 2540
+F 0 "#PWR013" H 11390 2290 50  0001 C CNN
+F 1 "GND" H 11390 2390 50  0000 C CNN
+F 2 "" H 11390 2540 50  0001 C CNN
+F 3 "" H 11390 2540 50  0001 C CNN
+	1    11390 2540
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:Polyfuse F1
+U 1 1 59A18393
+P 12020 1860
+F 0 "F1" V 11920 1860 50  0000 C CNN
+F 1 "500mA" V 12120 1860 50  0000 C CNN
+F 2 "Fuses:1206" H 12070 1660 50  0001 L CNN
+F 3 "" H 12020 1860 50  0001 C CNN
+	1    12020 1860
+	0    1    1    0   
+$EndComp
+Text GLabel 12625 2060 2    39   Output ~ 0
+USBDM
+Text GLabel 12625 2160 2    39   Output ~ 0
+USBDP
+Text GLabel 13130 2165 0    39   Input ~ 0
+USBDM
+Text GLabel 13130 2065 0    39   Input ~ 0
+USBDP
+Text GLabel 12970 2365 0    39   Input ~ 0
+3.3V
+Text GLabel 13005 1765 0    39   Input ~ 0
+3.3V
+Text GLabel 13950 1380 1    39   Input ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:GND #PWR014
+U 1 1 59A240BD
+P 13855 3370
+F 0 "#PWR014" H 13855 3120 50  0001 C CNN
+F 1 "GND" H 13855 3220 50  0000 C CNN
+F 2 "" H 13855 3370 50  0001 C CNN
+F 3 "" H 13855 3370 50  0001 C CNN
+	1    13855 3370
+	1    0    0    -1  
+$EndComp
+Text GLabel 11825 1745 1    39   Output ~ 0
+USB-RAW
+Text GLabel 12355 1600 1    39   Input ~ 0
+V_USB
+Text GLabel 14635 1765 2    39   Output ~ 0
+U0RXD
+Text GLabel 14635 1865 2    39   Input ~ 0
+U0TXD
+Text GLabel 14645 1965 2    39   Output ~ 0
+RTS
+Text GLabel 14645 2165 2    39   Output ~ 0
+DTR
+$Comp
+L AISReceiver-rescue:R R21
+U 1 1 59A2F61E
+P 10935 9725
+F 0 "R21" V 10850 9795 50  0000 C CNN
+F 1 "10K" V 10935 9725 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 10865 9725 50  0001 C CNN
+F 3 "" H 10935 9725 50  0001 C CNN
+	1    10935 9725
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:MBT3904DW1 Q2
+U 1 1 59A31395
+P 10295 9090
+F 0 "Q2" H 10495 9140 50  0000 L CNN
+F 1 "MBT3904DW1" H 10495 9040 50  0000 L CNN
+F 2 "Si4464:SOT-363" H 10495 9190 50  0001 C CNN
+F 3 "" H 10295 9090 50  0001 C CNN
+	1    10295 9090
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:R R19
+U 1 1 59A317E0
+P 9875 9090
+F 0 "R19" V 9790 9160 50  0000 C CNN
+F 1 "10K" V 9875 9090 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9805 9090 50  0001 C CNN
+F 3 "" H 9875 9090 50  0001 C CNN
+	1    9875 9090
+	0    1    1    0   
+$EndComp
+Text GLabel 10395 8730 1    39   Output ~ 0
+CHIP_PU
+Text GLabel 10395 10010 3    39   Output ~ 0
+0
+Text GLabel 11155 9725 2    39   Input ~ 0
+RTS
+Text GLabel 9645 9090 0    39   Input ~ 0
+DTR
+$Comp
+L AISReceiver-rescue:AP131-35 U2
+U 1 1 599FDA99
+P 3270 1975
+F 0 "U2" H 3400 1710 50  0000 L CNN
+F 1 "AP2112K-3.3V" H 3535 2220 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 3270 1575 50  0001 C CNN
+F 3 "" H 3270 1975 50  0001 C CNN
+	1    3270 1975
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:BAT48JFILM D1
+U 1 1 599FE345
+P 1790 1875
+F 0 "D1" H 1790 1975 50  0000 C CNN
+F 1 "BAT48JFILM" H 1790 1775 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323" H 1790 1700 50  0001 C CNN
+F 3 "" H 1790 1875 50  0001 C CNN
+	1    1790 1875
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:R_Small R4
+U 1 1 599FE6E8
+P 1485 2175
+F 0 "R4" H 1515 2195 50  0000 L CNN
+F 1 "10K" H 1515 2135 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1485 2175 50  0001 C CNN
+F 3 "" H 1485 2175 50  0001 C CNN
+	1    1485 2175
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C_Small C3
+U 1 1 599FE954
+P 2685 2165
+F 0 "C3" H 2695 2235 50  0000 L CNN
+F 1 "1uF" H 2695 2085 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2685 2165 50  0001 C CNN
+F 3 "" H 2685 2165 50  0001 C CNN
+	1    2685 2165
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C_Small C5
+U 1 1 599FEE05
+P 3895 2105
+F 0 "C5" H 3905 2175 50  0000 L CNN
+F 1 "2.2uF" H 3905 2025 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3895 2105 50  0001 C CNN
+F 3 "" H 3895 2105 50  0001 C CNN
+	1    3895 2105
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:Jumper JP1
+U 1 1 599FF0E3
+P 4410 2285
+F 0 "JP1" H 4410 2435 50  0000 C CNN
+F 1 "Jumper" H 4410 2205 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4410 2285 50  0001 C CNN
+F 3 "" H 4410 2285 50  0001 C CNN
+	1    4410 2285
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:R_Small R5
+U 1 1 599FF502
+P 4410 2745
+F 0 "R5" H 4440 2765 50  0000 L CNN
+F 1 "330R" H 4440 2705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 4410 2745 50  0001 C CNN
+F 3 "" H 4410 2745 50  0001 C CNN
+	1    4410 2745
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:LED_ALT D2
+U 1 1 599FFE83
+P 4410 3035
+F 0 "D2" H 4410 3135 50  0000 C CNN
+F 1 "GREEN" H 4410 2935 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm_Clear" H 4410 3035 50  0001 C CNN
+F 3 "" H 4410 3035 50  0001 C CNN
+	1    4410 3035
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR022
+U 1 1 59A00E8D
+P 1485 2330
+F 0 "#PWR022" H 1485 2080 50  0001 C CNN
+F 1 "GND" H 1485 2180 50  0000 C CNN
+F 2 "" H 1485 2330 50  0001 C CNN
+F 3 "" H 1485 2330 50  0001 C CNN
+	1    1485 2330
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR023
+U 1 1 59A01958
+P 2685 2320
+F 0 "#PWR023" H 2685 2070 50  0001 C CNN
+F 1 "GND" H 2685 2170 50  0000 C CNN
+F 2 "" H 2685 2320 50  0001 C CNN
+F 3 "" H 2685 2320 50  0001 C CNN
+	1    2685 2320
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR024
+U 1 1 59A020ED
+P 3895 2265
+F 0 "#PWR024" H 3895 2015 50  0001 C CNN
+F 1 "GND" H 3895 2115 50  0000 C CNN
+F 2 "" H 3895 2265 50  0001 C CNN
+F 3 "" H 3895 2265 50  0001 C CNN
+	1    3895 2265
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR025
+U 1 1 59A02AF8
+P 3270 2310
+F 0 "#PWR025" H 3270 2060 50  0001 C CNN
+F 1 "GND" H 3270 2160 50  0000 C CNN
+F 2 "" H 3270 2310 50  0001 C CNN
+F 3 "" H 3270 2310 50  0001 C CNN
+	1    3270 2310
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR026
+U 1 1 59A05D2C
+P 4410 3245
+F 0 "#PWR026" H 4410 2995 50  0001 C CNN
+F 1 "GND" H 4410 3095 50  0000 C CNN
+F 2 "" H 4410 3245 50  0001 C CNN
+F 3 "" H 4410 3245 50  0001 C CNN
+	1    4410 3245
+	1    0    0    -1  
+$EndComp
+Text GLabel 1485 1250 1    39   Input ~ 0
+V_USB
+Text GLabel 2450 2015 3    39   Input ~ 0
+VIN
+Text GLabel 3895 1745 1    39   Output ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:C_Small C4
+U 1 1 59A1293C
+P 6985 5345
+F 0 "C4" H 6995 5415 50  0000 L CNN
+F 1 "1uF" H 6995 5265 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6985 5345 50  0001 C CNN
+F 3 "" H 6985 5345 50  0001 C CNN
+	1    6985 5345
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C_Small C1
+U 1 1 59A12E90
+P 6195 5350
+F 0 "C1" H 6205 5420 50  0000 L CNN
+F 1 "100pF" H 6205 5270 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6195 5350 50  0001 C CNN
+F 3 "" H 6195 5350 50  0001 C CNN
+	1    6195 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:C_Small C2
+U 1 1 59A12E96
+P 6595 5350
+F 0 "C2" H 6605 5420 50  0000 L CNN
+F 1 "0.1uF" H 6605 5270 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6595 5350 50  0001 C CNN
+F 3 "" H 6595 5350 50  0001 C CNN
+	1    6595 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR027
+U 1 1 59A15ADB
+P 6195 5505
+F 0 "#PWR027" H 6195 5255 50  0001 C CNN
+F 1 "GND" H 6195 5355 50  0000 C CNN
+F 2 "" H 6195 5505 50  0001 C CNN
+F 3 "" H 6195 5505 50  0001 C CNN
+	1    6195 5505
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR028
+U 1 1 59A161D5
+P 6595 5510
+F 0 "#PWR028" H 6595 5260 50  0001 C CNN
+F 1 "GND" H 6595 5360 50  0000 C CNN
+F 2 "" H 6595 5510 50  0001 C CNN
+F 3 "" H 6595 5510 50  0001 C CNN
+	1    6595 5510
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR029
+U 1 1 59A17CBF
+P 6985 5510
+F 0 "#PWR029" H 6985 5260 50  0001 C CNN
+F 1 "GND" H 6985 5360 50  0000 C CNN
+F 2 "" H 6985 5510 50  0001 C CNN
+F 3 "" H 6985 5510 50  0001 C CNN
+	1    6985 5510
+	1    0    0    -1  
+$EndComp
+Text GLabel 6195 5190 1    39   Input ~ 0
+3.3V
+Text GLabel 6595 5180 1    39   Input ~ 0
+3.3V
+Text GLabel 6985 5190 1    39   Input ~ 0
+3.3V
+Text Notes 6080 5580 1    39   ~ 0
+Near Pin 2 - 3.3V Filters
+$Comp
+L AISReceiver-rescue:SW_Push SW2
+U 1 1 59A22CDA
+P 7520 9335
+F 0 "SW2" H 7570 9435 50  0000 L CNN
+F 1 "BUFFER_RESET" H 7520 9275 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3SL-1022P" H 7520 9535 50  0001 C CNN
+F 3 "" H 7520 9535 50  0001 C CNN
+	1    7520 9335
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:SW_Push SW1
+U 1 1 59A22ED1
+P 6075 9305
+F 0 "SW1" H 6125 9405 50  0000 L CNN
+F 1 "RESET" H 6075 9245 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3SL-1022P" H 6075 9505 50  0001 C CNN
+F 3 "" H 6075 9505 50  0001 C CNN
+	1    6075 9305
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:R R3
+U 1 1 59A233DF
+P 1155 9815
+F 0 "R3" V 1235 9815 50  0000 C CNN
+F 1 "10K" V 1155 9815 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1085 9815 50  0001 C CNN
+F 3 "" H 1155 9815 50  0001 C CNN
+	1    1155 9815
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:R R11
+U 1 1 59A23847
+P 6460 9030
+F 0 "R11" V 6500 9180 50  0000 C CNN
+F 1 "10K" V 6460 9030 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6390 9030 50  0001 C CNN
+F 3 "" H 6460 9030 50  0001 C CNN
+	1    6460 9030
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR030
+U 1 1 59A239EE
+P 7175 9480
+F 0 "#PWR030" H 7175 9230 50  0001 C CNN
+F 1 "GND" H 7175 9330 50  0000 C CNN
+F 2 "" H 7175 9480 50  0001 C CNN
+F 3 "" H 7175 9480 50  0001 C CNN
+	1    7175 9480
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR031
+U 1 1 59A23ADA
+P 5715 9450
+F 0 "#PWR031" H 5715 9200 50  0001 C CNN
+F 1 "GND" H 5715 9300 50  0000 C CNN
+F 2 "" H 5715 9450 50  0001 C CNN
+F 3 "" H 5715 9450 50  0001 C CNN
+	1    5715 9450
+	1    0    0    -1  
+$EndComp
+Text GLabel 8040 9335 2    39   BiDi ~ 0
+0
+Text GLabel 6560 9305 2    39   Input ~ 0
+CHIP_PU
+Text GLabel 1155 10070 3    39   Input ~ 0
+3.3V
+Text GLabel 6460 8790 1    39   Input ~ 0
+3.3V
+Text GLabel 8620 8620 1    39   Input ~ 0
+14
+$Comp
+L AISReceiver-rescue:R R16
+U 1 1 59A2CFB9
+P 8620 8880
+F 0 "R16" V 8660 9030 50  0000 C CNN
+F 1 "330R" V 8620 8880 39  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8550 8880 50  0001 C CNN
+F 3 "" H 8620 8880 50  0001 C CNN
+	1    8620 8880
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:LED_ALT D5
+U 1 1 59A2DDDB
+P 8620 9245
+F 0 "D5" H 8620 9345 50  0000 C CNN
+F 1 "YELLOW" H 8620 9145 39  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm_Clear" H 8620 9245 50  0001 C CNN
+F 3 "" H 8620 9245 50  0001 C CNN
+	1    8620 9245
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR032
+U 1 1 59A2F529
+P 8620 9475
+F 0 "#PWR032" H 8620 9225 50  0001 C CNN
+F 1 "GND" H 8620 9325 50  0000 C CNN
+F 2 "" H 8620 9475 50  0001 C CNN
+F 3 "" H 8620 9475 50  0001 C CNN
+	1    8620 9475
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:CONN_01X20 J2
+U 1 1 59A416F5
+P 3280 9470
+F 0 "J2" H 3280 10520 50  0000 C CNN
+F 1 "CONN_01X20" V 3380 9470 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 3280 9470 50  0001 C CNN
+F 3 "" H 3280 9470 50  0001 C CNN
+	1    3280 9470
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:CONN_01X20 J3
+U 1 1 59A41BAF
+P 4220 9475
+F 0 "J3" H 4220 10525 50  0000 C CNN
+F 1 "CONN_01X20" V 4320 9475 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 4220 9475 50  0001 C CNN
+F 3 "" H 4220 9475 50  0001 C CNN
+	1    4220 9475
+	-1   0    0    1   
+$EndComp
+Text GLabel 3545 8520 2    39   BiDi ~ 0
+36
+Text GLabel 3545 8620 2    39   BiDi ~ 0
+U1RXD
+Text GLabel 3545 8720 2    39   BiDi ~ 0
+U1TXD
+Text GLabel 3545 8820 2    39   BiDi ~ 0
+39
+Text GLabel 3545 8920 2    39   BiDi ~ 0
+32K_XP
+Text GLabel 3545 9020 2    39   BiDi ~ 0
+32K_XN
+Text GLabel 3545 9120 2    39   BiDi ~ 0
+34
+Text GLabel 3545 9220 2    39   BiDi ~ 0
+35
+Text GLabel 3545 9320 2    39   BiDi ~ 0
+GPIO1
+Text GLabel 3545 9420 2    39   BiDi ~ 0
+GPIO2
+Text GLabel 3545 9520 2    39   BiDi ~ 0
+GPIO3
+Text GLabel 3545 9620 2    39   BiDi ~ 0
+14
+Text GLabel 3545 9720 2    39   BiDi ~ 0
+ACC_SDO
+Text GLabel 3540 9820 2    39   BiDi ~ 0
+13
+Text GLabel 3540 9920 2    39   BiDi ~ 0
+CHIP_PU
+Text GLabel 3540 10020 2    39   BiDi ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:GND #PWR033
+U 1 1 59A487AE
+P 3535 10120
+F 0 "#PWR033" H 3535 9870 50  0001 C CNN
+F 1 "GND" V 3530 9940 50  0000 C CNN
+F 2 "" H 3535 10120 50  0001 C CNN
+F 3 "" H 3535 10120 50  0001 C CNN
+	1    3535 10120
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR034
+U 1 1 59A48ED6
+P 3535 10420
+F 0 "#PWR034" H 3535 10170 50  0001 C CNN
+F 1 "GND" V 3530 10240 50  0000 C CNN
+F 2 "" H 3535 10420 50  0001 C CNN
+F 3 "" H 3535 10420 50  0001 C CNN
+	1    3535 10420
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3535 10320 2    39   Input ~ 0
+VUSB-RAW
+Text GLabel 4500 8625 2    39   BiDi ~ 0
+SDA
+Text GLabel 4500 8725 2    39   BiDi ~ 0
+U0TXD
+Text GLabel 4500 8825 2    39   BiDi ~ 0
+U0RXD
+Text GLabel 4500 8925 2    39   BiDi ~ 0
+SCL
+Text GLabel 4500 9025 2    39   BiDi ~ 0
+SDO
+Text GLabel 4500 9125 2    39   BiDi ~ 0
+SDI
+Text GLabel 4500 9225 2    39   BiDi ~ 0
+SCLK
+Text GLabel 4500 9325 2    39   BiDi ~ 0
+SDN
+Text GLabel 4500 9525 2    39   BiDi ~ 0
+nSEL
+Text GLabel 4500 9625 2    39   BiDi ~ 0
+0
+Text GLabel 4500 9725 2    39   BiDi ~ 0
+nIRQ
+Text GLabel 4495 9825 2    39   BiDi ~ 0
+ACC_CS
+Text GLabel 4495 9925 2    39   BiDi ~ 0
+16
+Text GLabel 4495 10025 2    39   BiDi ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:GND #PWR035
+U 1 1 59A4EC2D
+P 4490 10125
+F 0 "#PWR035" H 4490 9875 50  0001 C CNN
+F 1 "GND" V 4485 9945 50  0000 C CNN
+F 2 "" H 4490 10125 50  0001 C CNN
+F 3 "" H 4490 10125 50  0001 C CNN
+	1    4490 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR036
+U 1 1 59A4EC33
+P 4490 10425
+F 0 "#PWR036" H 4490 10175 50  0001 C CNN
+F 1 "GND" V 4485 10245 50  0000 C CNN
+F 2 "" H 4490 10425 50  0001 C CNN
+F 3 "" H 4490 10425 50  0001 C CNN
+	1    4490 10425
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4490 10325 2    39   Input ~ 0
+VUSB-RAW
+$Comp
+L AISReceiver-rescue:GND #PWR037
+U 1 1 59A4EECB
+P 4495 8525
+F 0 "#PWR037" H 4495 8275 50  0001 C CNN
+F 1 "GND" V 4490 8345 50  0000 C CNN
+F 2 "" H 4495 8525 50  0001 C CNN
+F 3 "" H 4495 8525 50  0001 C CNN
+	1    4495 8525
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:ESP32-WROOM U1
+U 1 1 59AB55B8
+P 8600 5650
+F 0 "U1" H 7900 6900 60  0000 C CNN
+F 1 "ESP32-WROOM" H 9100 6900 60  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 8950 7000 60  0001 C CNN
+F 3 "" H 8150 6100 60  0001 C CNN
+	1    8600 5650
+	1    0    0    -1  
+$EndComp
+Text GLabel 7570 5250 0    39   BiDi ~ 0
+36
+Text GLabel 7575 5350 0    39   BiDi ~ 0
+39
+Text GLabel 7580 5050 0    39   Input ~ 0
+3.3V
+Text GLabel 7575 5450 0    39   Input ~ 0
+34
+Text GLabel 7575 5550 0    39   Input ~ 0
+35
+Text GLabel 7580 5650 0    39   Input ~ 0
+32K_XP
+Text GLabel 7580 5750 0    39   Input ~ 0
+32K_XN
+Text GLabel 7580 5850 0    39   BiDi ~ 0
+GPIO1
+Text GLabel 7580 5950 0    39   BiDi ~ 0
+GPIO2
+Text GLabel 7580 6050 0    39   BiDi ~ 0
+GPIO3
+Text GLabel 7580 6150 0    39   BiDi ~ 0
+14
+Text GLabel 7580 6250 0    39   BiDi ~ 0
+ACC_SDO
+$Comp
+L AISReceiver-rescue:GND #PWR041
+U 1 1 59ACC106
+P 7585 6350
+F 0 "#PWR041" H 7585 6100 50  0001 C CNN
+F 1 "GND" V 7585 6165 50  0000 C CNN
+F 2 "" H 7585 6350 50  0001 C CNN
+F 3 "" H 7585 6350 50  0001 C CNN
+	1    7585 6350
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR042
+U 1 1 59ACD7F5
+P 8150 6765
+F 0 "#PWR042" H 8150 6515 50  0001 C CNN
+F 1 "GND" V 8150 6580 50  0000 C CNN
+F 2 "" H 8150 6765 50  0001 C CNN
+F 3 "" H 8150 6765 50  0001 C CNN
+	1    8150 6765
+	1    0    0    -1  
+$EndComp
+Text GLabel 8250 6760 3    39   BiDi ~ 0
+13
+Text GLabel 7580 5150 0    39   Input ~ 0
+CHIP_PU
+Text GLabel 8350 6760 3    39   BiDi ~ 0
+U1RXD
+Text GLabel 8450 6760 3    39   BiDi ~ 0
+U1TXD
+Text GLabel 9050 6770 3    39   Output ~ 0
+nSEL
+$Comp
+L AISReceiver-rescue:GND #PWR043
+U 1 1 59ADD864
+P 9575 6300
+F 0 "#PWR043" H 9575 6050 50  0001 C CNN
+F 1 "GND" V 9575 6115 50  0000 C CNN
+F 2 "" H 9575 6300 50  0001 C CNN
+F 3 "" H 9575 6300 50  0001 C CNN
+	1    9575 6300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9570 6100 2    39   BiDi ~ 0
+0
+Text GLabel 9560 6000 2    39   Input ~ 0
+nIRQ
+Text GLabel 9560 5900 2    39   BiDi ~ 0
+16
+Text GLabel 9560 5800 2    39   BiDi ~ 0
+ACC_CS
+Text GLabel 9560 5700 2    39   Input ~ 0
+SDN
+Text GLabel 9570 5600 2    39   Output ~ 0
+SCLK
+Text GLabel 9570 5500 2    39   Input ~ 0
+SDO
+Text GLabel 9570 5300 2    39   BiDi ~ 0
+SDA
+Text GLabel 9570 5000 2    39   BiDi ~ 0
+SCL
+Text GLabel 9580 4900 2    39   Output ~ 0
+SDI
+Text GLabel 9565 5200 2    39   Input ~ 0
+U0RXD
+Text GLabel 9565 5100 2    39   Output ~ 0
+U0TXD
+Text GLabel 8550 6760 3    39   BiDi ~ 0
+SPI_CS
+Text GLabel 8650 6760 3    39   BiDi ~ 0
+SPI_CLK
+Text GLabel 8750 6760 3    39   BiDi ~ 0
+SPI_MISO
+Text GLabel 8850 6760 3    39   BiDi ~ 0
+SPI_MOSI
+Text GLabel 960  9580 0    39   BiDi ~ 0
+SPI_CS
+Text GLabel 2455 9380 2    39   BiDi ~ 0
+SPI_CLK
+Text GLabel 2455 9480 2    39   BiDi ~ 0
+SPI_MISO
+Text GLabel 2455 9580 2    39   BiDi ~ 0
+SPI_MOSI
+$Comp
+L AISReceiver-rescue:R R2
+U 1 1 59B10F4E
+P 2250 9580
+F 0 "R2" V 2175 9730 50  0000 C CNN
+F 1 "100R" V 2250 9580 39  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2180 9580 50  0001 C CNN
+F 3 "" H 2250 9580 50  0001 C CNN
+	1    2250 9580
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:R R1
+U 1 1 59B11256
+P 2250 9480
+F 0 "R1" V 2290 9630 50  0000 C CNN
+F 1 "100R" V 2250 9480 39  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2180 9480 50  0001 C CNN
+F 3 "" H 2250 9480 50  0001 C CNN
+	1    2250 9480
+	0    -1   -1   0   
+$EndComp
+$Comp
+L AISReceiver-rescue:R R15
+U 1 1 59B18AB9
+P 7920 9040
+F 0 "R15" V 8000 9040 50  0000 C CNN
+F 1 "10K" V 7920 9040 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7850 9040 50  0001 C CNN
+F 3 "" H 7920 9040 50  0001 C CNN
+	1    7920 9040
+	-1   0    0    1   
+$EndComp
+Text GLabel 7920 8755 1    39   Input ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:CONN_02X03 J1
+U 1 1 59B28510
+P 1700 9480
+F 0 "J1" H 1700 9680 50  0000 C CNN
+F 1 "SPI" H 1700 9280 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Horizontal" H 1700 8280 50  0001 C CNN
+F 3 "" H 1700 8280 50  0001 C CNN
+	1    1700 9480
+	1    0    0    -1  
+$EndComp
+Text GLabel 1390 9380 0    39   Input ~ 0
+3.3V
+$Comp
+L AISReceiver-rescue:GND #PWR044
+U 1 1 59B29D61
+P 1390 9480
+F 0 "#PWR044" H 1390 9230 50  0001 C CNN
+F 1 "GND" V 1385 9300 50  0000 C CNN
+F 2 "" H 1390 9480 50  0001 C CNN
+F 3 "" H 1390 9480 50  0001 C CNN
+	1    1390 9480
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:Crystal_GND23 X1
+U 1 1 59B34A56
+P 2945 6470
+F 0 "X1" V 3105 6535 50  0000 L CNN
+F 1 "30MHz" V 2795 6530 39  0000 L CNN
+F 2 "Crystal:Crystal_SMD_0603-4Pin_6.0x3.5mm_HandSoldering" H 2945 6470 50  0001 C CNN
+F 3 "" H 2945 6470 50  0001 C CNN
+	1    2945 6470
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR045
+U 1 1 59B350FE
+P 3255 6550
+F 0 "#PWR045" H 3255 6550 30  0001 C CNN
+F 1 "GND" H 3255 6480 30  0001 C CNN
+F 2 "" H 3255 6550 60  0000 C CNN
+F 3 "" H 3255 6550 60  0000 C CNN
+	1    3255 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND-RESCUE-AISReceiver #PWR046
+U 1 1 59B351E1
+P 2455 6470
+F 0 "#PWR046" H 2455 6470 30  0001 C CNN
+F 1 "GND" H 2455 6400 30  0001 C CNN
+F 2 "" H 2455 6470 60  0000 C CNN
+F 3 "" H 2455 6470 60  0000 C CNN
+	1    2455 6470
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:C_Small C19
+U 1 1 59B3A184
+P 2780 6150
+F 0 "C19" V 2720 6195 50  0000 L CNN
+F 1 "22pF" V 2720 5910 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2780 6150 50  0001 C CNN
+F 3 "" H 2780 6150 50  0001 C CNN
+	1    2780 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L AISReceiver-rescue:C_Small C20
+U 1 1 59B3A7B8
+P 2770 6785
+F 0 "C20" V 2820 6825 50  0000 L CNN
+F 1 "22pF" V 2815 6545 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2770 6785 50  0001 C CNN
+F 3 "" H 2770 6785 50  0001 C CNN
+	1    2770 6785
+	0    1    1    0   
+$EndComp
+Text GLabel 8950 6760 3    39   BiDi ~ 0
+GPIO0
+Text GLabel 4500 9425 2    39   BiDi ~ 0
+GPIO0
+Text Notes 2255 735  0    60   ~ 0
+USB POWER INPUT
+Text Notes 13105 765  0    60   ~ 0
+USB TO SERIAL UART
+Text Notes 7790 4170 0    60   ~ 0
+ESP32 MCU - WIFI - BLUETOOTH\n
+Text Notes 2995 4160 0    60   ~ 0
+Si4464 AIS RECEIVER\n
+Text Notes 2220 8050 0    60   ~ 0
+ESPTHING EQUIVALENT CONNECTORS
+Text Notes 8080 8045 0    60   ~ 0
+LEDS - RESET BUTTON
+Wire Wire Line
+	2260 5750 2460 5750
+Wire Wire Line
+	2460 5600 2460 5750
+Connection ~ 2460 5750
+Wire Wire Line
+	1660 5600 1660 5750
+Connection ~ 1660 5750
+Wire Wire Line
+	700  5550 700  5150
+Wire Wire Line
+	4055 5115 4455 5115
+Wire Wire Line
+	4855 5015 4855 5115
+Connection ~ 4855 5115
+Wire Wire Line
+	4455 5015 4455 5115
+Connection ~ 4455 5115
+Wire Wire Line
+	4455 4515 4455 4615
+Wire Wire Line
+	4545 6150 5260 6150
+Wire Wire Line
+	4545 6250 5260 6250
+Wire Wire Line
+	4545 6350 4970 6350
+Wire Wire Line
+	4545 6450 5260 6450
+Wire Wire Line
+	4545 6550 5260 6550
+Wire Wire Line
+	1660 4950 1660 5100
+Wire Wire Line
+	2460 4950 1660 4950
+Wire Wire Line
+	2460 4750 2460 4850
+Connection ~ 2460 4950
+Wire Wire Line
+	2760 5650 3345 5650
+Wire Wire Line
+	2760 5650 2760 4850
+Wire Wire Line
+	2760 4850 2460 4850
+Connection ~ 2460 4850
+Wire Wire Line
+	2460 4150 2460 4350
+Wire Wire Line
+	3265 4690 3265 4490
+Wire Wire Line
+	3265 5190 3265 5550
+Wire Wire Line
+	3180 5550 3265 5550
+Wire Wire Line
+	3845 4515 4055 4515
+Wire Wire Line
+	4970 6035 4970 6350
+Connection ~ 4970 6350
+Wire Wire Line
+	4970 5455 4970 5535
+Wire Wire Line
+	1360 5750 1660 5750
+Connection ~ 3265 5550
+Wire Wire Line
+	2880 6150 2945 6150
+Wire Wire Line
+	2945 6150 2945 6320
+Wire Wire Line
+	3345 6785 3345 6250
+Wire Wire Line
+	2870 6785 2945 6785
+Wire Wire Line
+	2945 6785 2945 6620
+Wire Wire Line
+	4590 5550 4545 5550
+Wire Wire Line
+	4545 5650 4590 5650
+Wire Wire Line
+	4590 5750 4545 5750
+Wire Wire Line
+	4590 5850 4545 5850
+Wire Wire Line
+	4055 4515 4055 4615
+Wire Wire Line
+	4055 5015 4055 5115
+Wire Wire Line
+	3845 4515 3845 5150
+Wire Wire Line
+	3945 5250 3945 5150
+Wire Wire Line
+	3945 5150 3845 5150
+Connection ~ 3845 5150
+Connection ~ 4055 4515
+Wire Wire Line
+	3945 6850 3945 6890
+Wire Wire Line
+	11340 2460 11340 2510
+Wire Wire Line
+	11340 2510 11390 2510
+Wire Wire Line
+	11390 2510 11390 2540
+Wire Wire Line
+	11440 2510 11440 2460
+Connection ~ 11390 2510
+Wire Wire Line
+	11740 2060 12040 2060
+Wire Wire Line
+	11740 2160 12260 2160
+Wire Wire Line
+	12625 2060 12600 2060
+Wire Wire Line
+	12625 2160 12600 2160
+Wire Wire Line
+	13150 2065 13130 2065
+Wire Wire Line
+	13150 2165 13130 2165
+Wire Wire Line
+	12970 2365 13025 2365
+Wire Wire Line
+	13025 2365 13025 2500
+Connection ~ 13025 2365
+Wire Wire Line
+	13005 1765 13150 1765
+Wire Wire Line
+	13950 1380 13950 1465
+Wire Wire Line
+	11740 1860 11825 1860
+Wire Wire Line
+	11825 1745 11825 1860
+Connection ~ 11825 1860
+Wire Wire Line
+	12040 2495 12040 2060
+Connection ~ 12040 2060
+Wire Wire Line
+	12260 2495 12260 2160
+Connection ~ 12260 2160
+Wire Wire Line
+	11825 2795 11825 2840
+Wire Wire Line
+	12040 2795 12040 2840
+Wire Wire Line
+	12260 2795 12260 2835
+Wire Wire Line
+	13750 1465 13750 1420
+Wire Wire Line
+	13750 1420 13075 1420
+Wire Wire Line
+	13075 1420 13075 1665
+Wire Wire Line
+	13075 1665 12895 1665
+Wire Wire Line
+	12350 1600 12350 1665
+Wire Wire Line
+	12350 1860 12170 1860
+Wire Wire Line
+	12650 1525 12650 1665
+Connection ~ 12650 1665
+Wire Wire Line
+	12895 1525 12895 1665
+Connection ~ 12895 1665
+Wire Wire Line
+	12650 1190 12650 1225
+Wire Wire Line
+	12895 1190 12895 1225
+Wire Wire Line
+	13025 2800 13025 2830
+Wire Wire Line
+	13750 3265 13750 3335
+Wire Wire Line
+	13750 3335 13855 3335
+Wire Wire Line
+	13950 3335 13950 3265
+Wire Wire Line
+	13855 3370 13855 3335
+Connection ~ 13855 3335
+Wire Wire Line
+	12355 1600 12350 1600
+Connection ~ 12350 1665
+Wire Wire Line
+	14550 1765 14635 1765
+Wire Wire Line
+	14635 1865 14550 1865
+Wire Wire Line
+	14550 1965 14645 1965
+Wire Wire Line
+	14550 2165 14645 2165
+Wire Wire Line
+	10785 9725 10695 9725
+Wire Wire Line
+	10395 8730 10395 8890
+Wire Wire Line
+	10095 9090 10025 9090
+Wire Wire Line
+	9645 9090 9690 9090
+Wire Wire Line
+	10395 9925 10395 10010
+Wire Wire Line
+	10395 9290 10395 9370
+Wire Wire Line
+	10395 9370 11120 9370
+Wire Wire Line
+	11120 9370 11120 9725
+Wire Wire Line
+	11085 9725 11120 9725
+Connection ~ 11120 9725
+Wire Wire Line
+	10395 9450 10395 9525
+Wire Wire Line
+	10395 9450 9690 9450
+Wire Wire Line
+	9690 9450 9690 9090
+Connection ~ 9690 9090
+Wire Wire Line
+	1640 1875 1485 1875
+Connection ~ 1485 1875
+Wire Wire Line
+	2685 2065 2685 1875
+Connection ~ 2685 1875
+Wire Wire Line
+	2685 2265 2685 2320
+Wire Wire Line
+	2860 1975 2970 1975
+Wire Wire Line
+	2860 1975 2860 1875
+Connection ~ 2860 1875
+Wire Wire Line
+	3270 2275 3270 2310
+Wire Wire Line
+	3570 1875 3895 1875
+Wire Wire Line
+	3895 1745 3895 1875
+Wire Wire Line
+	4410 1875 4410 1985
+Wire Wire Line
+	3895 2205 3895 2265
+Connection ~ 3895 1875
+Wire Wire Line
+	4410 2585 4410 2645
+Wire Wire Line
+	4410 2845 4410 2885
+Wire Wire Line
+	4410 3185 4410 3245
+Wire Wire Line
+	1485 2275 1485 2330
+Wire Wire Line
+	2450 2015 2450 1875
+Connection ~ 2450 1875
+Wire Wire Line
+	6195 5190 6195 5250
+Wire Wire Line
+	6195 5450 6195 5505
+Wire Wire Line
+	6595 5180 6595 5250
+Wire Wire Line
+	6595 5450 6595 5510
+Wire Wire Line
+	6985 5190 6985 5245
+Wire Wire Line
+	6985 5445 6985 5510
+Wire Wire Line
+	7920 8755 7920 8890
+Wire Wire Line
+	7920 9190 7920 9335
+Wire Wire Line
+	7720 9335 7920 9335
+Connection ~ 7920 9335
+Wire Wire Line
+	7320 9335 7175 9335
+Wire Wire Line
+	7175 9335 7175 9480
+Wire Wire Line
+	6460 8790 6460 8880
+Wire Wire Line
+	6460 9180 6460 9305
+Wire Wire Line
+	6275 9305 6460 9305
+Connection ~ 6460 9305
+Wire Wire Line
+	5875 9305 5715 9305
+Wire Wire Line
+	5715 9305 5715 9450
+Wire Wire Line
+	8620 8620 8620 8730
+Wire Wire Line
+	8620 9030 8620 9095
+Wire Wire Line
+	8620 9395 8620 9475
+Wire Wire Line
+	3480 8520 3545 8520
+Wire Wire Line
+	3480 8620 3545 8620
+Wire Wire Line
+	3480 8720 3545 8720
+Wire Wire Line
+	3480 8820 3545 8820
+Wire Wire Line
+	3545 8920 3480 8920
+Wire Wire Line
+	3480 9020 3545 9020
+Wire Wire Line
+	3545 9120 3480 9120
+Wire Wire Line
+	3545 9220 3480 9220
+Wire Wire Line
+	3545 9320 3480 9320
+Wire Wire Line
+	3545 9420 3480 9420
+Wire Wire Line
+	3545 9520 3480 9520
+Wire Wire Line
+	3545 9620 3480 9620
+Wire Wire Line
+	3545 9720 3480 9720
+Wire Wire Line
+	3540 9820 3480 9820
+Wire Wire Line
+	3540 9920 3480 9920
+Wire Wire Line
+	3540 10020 3480 10020
+Wire Wire Line
+	3535 10120 3480 10120
+Wire Wire Line
+	3535 10320 3480 10320
+Wire Wire Line
+	3535 10420 3480 10420
+Wire Wire Line
+	4420 8525 4495 8525
+Wire Wire Line
+	4420 8625 4500 8625
+Wire Wire Line
+	4500 8725 4420 8725
+Wire Wire Line
+	4500 8825 4420 8825
+Wire Wire Line
+	4500 8925 4420 8925
+Wire Wire Line
+	4500 9025 4420 9025
+Wire Wire Line
+	4500 9125 4420 9125
+Wire Wire Line
+	4500 9225 4420 9225
+Wire Wire Line
+	4500 9325 4420 9325
+Wire Wire Line
+	4500 9525 4420 9525
+Wire Wire Line
+	4500 9625 4420 9625
+Wire Wire Line
+	4500 9725 4420 9725
+Wire Wire Line
+	4495 9825 4420 9825
+Wire Wire Line
+	4495 9925 4420 9925
+Wire Wire Line
+	4495 10025 4420 10025
+Wire Wire Line
+	4490 10125 4420 10125
+Wire Wire Line
+	4490 10325 4420 10325
+Wire Wire Line
+	4490 10425 4420 10425
+Wire Wire Line
+	7580 5050 7650 5050
+Wire Wire Line
+	7580 5150 7650 5150
+Wire Wire Line
+	7570 5250 7650 5250
+Wire Wire Line
+	7575 5350 7650 5350
+Wire Wire Line
+	7575 5450 7650 5450
+Wire Wire Line
+	7575 5550 7650 5550
+Wire Wire Line
+	7650 5650 7580 5650
+Wire Wire Line
+	7580 5750 7650 5750
+Wire Wire Line
+	7580 5850 7650 5850
+Wire Wire Line
+	7580 5950 7650 5950
+Wire Wire Line
+	7580 6050 7650 6050
+Wire Wire Line
+	7580 6150 7650 6150
+Wire Wire Line
+	7580 6250 7650 6250
+Wire Wire Line
+	7585 6350 7650 6350
+Wire Wire Line
+	9500 4900 9580 4900
+Wire Wire Line
+	9570 5000 9500 5000
+Wire Wire Line
+	9565 5100 9500 5100
+Wire Wire Line
+	9565 5200 9500 5200
+Wire Wire Line
+	9570 5300 9500 5300
+Wire Wire Line
+	9570 5500 9500 5500
+Wire Wire Line
+	9500 5600 9570 5600
+Wire Wire Line
+	9560 5700 9500 5700
+Wire Wire Line
+	9560 5800 9500 5800
+Wire Wire Line
+	9560 5900 9500 5900
+Wire Wire Line
+	9560 6000 9500 6000
+Wire Wire Line
+	9570 6100 9500 6100
+Wire Wire Line
+	9500 6300 9540 6300
+Wire Wire Line
+	9500 6200 9540 6200
+Wire Wire Line
+	9540 6200 9540 6300
+Connection ~ 9540 6300
+Wire Wire Line
+	9050 6700 9050 6770
+Wire Wire Line
+	8950 6700 8950 6760
+Wire Wire Line
+	8450 6700 8450 6760
+Wire Wire Line
+	8350 6700 8350 6760
+Wire Wire Line
+	8250 6700 8250 6760
+Wire Wire Line
+	8150 6700 8150 6765
+Wire Wire Line
+	8850 6700 8850 6760
+Wire Wire Line
+	8750 6700 8750 6760
+Wire Wire Line
+	8650 6700 8650 6760
+Wire Wire Line
+	8550 6700 8550 6760
+Wire Wire Line
+	1155 10070 1155 9965
+Wire Wire Line
+	960  9580 1155 9580
+Wire Wire Line
+	1950 9380 2455 9380
+Wire Wire Line
+	1155 9665 1155 9580
+Connection ~ 1155 9580
+Wire Wire Line
+	2455 9480 2400 9480
+Wire Wire Line
+	1950 9480 2100 9480
+Wire Wire Line
+	1950 9580 2100 9580
+Wire Wire Line
+	2455 9580 2400 9580
+Wire Wire Line
+	1450 9380 1390 9380
+Wire Wire Line
+	1390 9480 1450 9480
+Wire Wire Line
+	3145 6470 3255 6470
+Wire Wire Line
+	3255 6470 3255 6550
+Wire Wire Line
+	2455 6470 2565 6470
+Connection ~ 2945 6150
+Wire Wire Line
+	2680 6150 2565 6150
+Wire Wire Line
+	2565 6150 2565 6470
+Connection ~ 2565 6470
+Connection ~ 2945 6785
+Wire Wire Line
+	2560 6470 2560 6785
+Wire Wire Line
+	2560 6785 2670 6785
+Wire Wire Line
+	4500 9425 4420 9425
+Wire Notes Line
+	470  7650 16065 7650
+Wire Notes Line
+	470  3895 16060 3895
+Wire Notes Line
+	9735 3895 9735 470 
+Wire Notes Line
+	11810 7650 11810 9965
+Wire Notes Line
+	11140 3890 11140 7650
+Wire Wire Line
+	960  5750 850  5750
+Wire Notes Line
+	5520 470  5520 11220
+Wire Wire Line
+	2460 5750 3345 5750
+Wire Wire Line
+	1660 5750 1860 5750
+Wire Wire Line
+	4855 5115 4855 5295
+Wire Wire Line
+	4455 5115 4855 5115
+Wire Wire Line
+	2460 4950 2460 5100
+Wire Wire Line
+	2460 4850 2460 4950
+Wire Wire Line
+	4970 6350 5260 6350
+Wire Wire Line
+	3265 5550 3345 5550
+Wire Wire Line
+	3845 5150 3845 5250
+Wire Wire Line
+	4055 4515 4455 4515
+Wire Wire Line
+	11390 2510 11440 2510
+Wire Wire Line
+	13025 2365 13150 2365
+Wire Wire Line
+	11825 1860 11870 1860
+Wire Wire Line
+	11825 1860 11825 2495
+Wire Wire Line
+	12040 2060 12300 2060
+Wire Wire Line
+	12260 2160 12300 2160
+Wire Wire Line
+	12650 1665 12350 1665
+Wire Wire Line
+	12895 1665 12650 1665
+Wire Wire Line
+	13855 3335 13950 3335
+Wire Wire Line
+	12350 1665 12350 1860
+Wire Wire Line
+	11120 9725 11155 9725
+Wire Wire Line
+	9690 9090 9725 9090
+Wire Wire Line
+	1485 1875 1485 2075
+Wire Wire Line
+	2685 1875 2860 1875
+Wire Wire Line
+	2860 1875 2970 1875
+Wire Wire Line
+	3895 1875 4410 1875
+Wire Wire Line
+	3895 1875 3895 2005
+Wire Wire Line
+	2450 1875 2685 1875
+Wire Wire Line
+	7920 9335 8040 9335
+Wire Wire Line
+	6460 9305 6560 9305
+Wire Wire Line
+	9540 6300 9575 6300
+Wire Wire Line
+	1155 9580 1450 9580
+Wire Wire Line
+	2945 6150 3345 6150
+Wire Wire Line
+	2565 6470 2745 6470
+Wire Wire Line
+	2945 6785 3345 6785
+Wire Wire Line
+	1485 1250 1485 1875
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 600F1905
+P 12200 8500
+F 0 "H1" H 12300 8503 50  0000 L CNN
+F 1 "MountingHole_Pad" H 12300 8458 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 12200 8500 50  0001 C CNN
+F 3 "~" H 12200 8500 50  0001 C CNN
+	1    12200 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 60131B27
+P 12650 8500
+F 0 "H3" H 12750 8503 50  0000 L CNN
+F 1 "MountingHole_Pad" H 12750 8458 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 12650 8500 50  0001 C CNN
+F 3 "~" H 12650 8500 50  0001 C CNN
+	1    12650 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H5
+U 1 1 60131F3E
+P 13100 8500
+F 0 "H5" H 13200 8503 50  0000 L CNN
+F 1 "MountingHole_Pad" H 13200 8458 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 13100 8500 50  0001 C CNN
+F 3 "~" H 13100 8500 50  0001 C CNN
+	1    13100 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 60132192
+P 12200 9200
+F 0 "H2" H 12100 9203 50  0000 R CNN
+F 1 "MountingHole_Pad" H 12100 9248 50  0001 R CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 12200 9200 50  0001 C CNN
+F 3 "~" H 12200 9200 50  0001 C CNN
+	1    12200 9200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 60132553
+P 12650 9200
+F 0 "H4" H 12550 9203 50  0000 R CNN
+F 1 "MountingHole_Pad" H 12550 9248 50  0001 R CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 12650 9200 50  0001 C CNN
+F 3 "~" H 12650 9200 50  0001 C CNN
+	1    12650 9200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H6
+U 1 1 601327A7
+P 13100 9200
+F 0 "H6" H 13000 9203 50  0000 R CNN
+F 1 "MountingHole_Pad" H 13000 9248 50  0001 R CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 13100 9200 50  0001 C CNN
+F 3 "~" H 13100 9200 50  0001 C CNN
+	1    13100 9200
+	-1   0    0    1   
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR015
+U 1 1 60132F0A
+P 13400 8850
+F 0 "#PWR015" H 13400 8600 50  0001 C CNN
+F 1 "GND" H 13405 8677 50  0000 C CNN
+F 2 "" H 13400 8850 50  0001 C CNN
+F 3 "" H 13400 8850 50  0001 C CNN
+	1    13400 8850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	13100 8600 13100 8850
+Wire Wire Line
+	13100 8850 13400 8850
+Wire Wire Line
+	13100 9100 13100 8850
+Connection ~ 13100 8850
+Wire Wire Line
+	13100 8850 12650 8850
+Wire Wire Line
+	12650 8850 12650 8600
+Wire Wire Line
+	12650 9100 12650 8850
+Connection ~ 12650 8850
+Wire Wire Line
+	12200 8600 12200 8850
+Wire Wire Line
+	12650 8850 12200 8850
+Connection ~ 12200 8850
+Wire Wire Line
+	12200 8850 12200 9100
+$Comp
+L Device:RF_Shield_One_Piece J5
+U 1 1 601F19DF
+P 14750 8850
+F 0 "J5" H 15380 8839 50  0000 L CNN
+F 1 "RF_Shield" H 15380 8748 50  0000 L CNN
+F 2 "RF_Shielding:Wuerth_36103205_20x20mm" H 14750 8750 50  0001 C CNN
+F 3 "~" H 14750 8750 50  0001 C CNN
+	1    14750 8850
+	1    0    0    -1  
+$EndComp
+$Comp
+L AISReceiver-rescue:GND #PWR016
+U 1 1 60213D66
+P 14750 9350
+F 0 "#PWR016" H 14750 9100 50  0001 C CNN
+F 1 "GND" H 14755 9177 50  0000 C CNN
+F 2 "" H 14750 9350 50  0001 C CNN
+F 3 "" H 14750 9350 50  0001 C CNN
+	1    14750 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14750 9250 14750 9350
+$Comp
+L AISReceiver-rescue:C-RESCUE-AISReceiver C18
+U 1 1 51EB0534
+P 4855 4815
+F 0 "C18" H 4855 4915 40  0000 L CNN
+F 1 "1uF" H 4861 4730 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4893 4665 30  0001 C CNN
+F 3 "~" H 4855 4815 60  0000 C CNN
+	1    4855 4815
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4930 4515 4855 4515
+Connection ~ 4455 4515
+Wire Wire Line
+	4855 4615 4855 4515
+Connection ~ 4855 4515
+Wire Wire Line
+	4855 4515 4455 4515
+Wire Wire Line
+	1940 1875 2450 1875
+$EndSCHEMATC
